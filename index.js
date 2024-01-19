@@ -1,6 +1,12 @@
 const Notification = props => {
   const {className, NotificationText, ImageLink} = props
-  return <p src={ImageLink} className={className}>{NotificationText}</p>
+  const containerClassName={`notification-container ${className}`}
+  return (
+    <div className={containerClassName}> 
+      <img src={ImageLink} className="icon-image"/>
+  <p className={className}>{NotificationText}</p>
+      </div>
+    )
 }
 
 const element = (
